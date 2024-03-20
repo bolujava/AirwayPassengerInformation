@@ -3,7 +3,6 @@ import './PassengersInfoInfantMiddleTab.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-
 const PassengersInfoInfantMiddleTab = () => {
   return (
     <div>

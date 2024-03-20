@@ -1,44 +1,40 @@
 import React from 'react';
 import './PassengersInfoHeader.css';
+import AirwayLogo from '/src/assets/AirwayLogo.svg';
+import ProgressBarAdult from '/src/assets/progress-bar-adult.svg';
+
 
 const PassengersInfoHeader = () => {
-  return (
-    <div className="main-airway-body">
-      <div className="main-container-header">
-        <div className="flightImgAndAirway">
-          <img src="src/assets/AirwayLogo.svg" alt="Header Plane" />
-          <span className="airwayText">Airway</span>
-        </div>
+    return (
+        <div className="main-airway-body-ad">
+            <div className="main-container-header-ad">
+                <div className="flightImgAndAirway-ad">
+                    <img src= {AirwayLogo} alt="Header Plane" />
+                    <span className="airwayText-ad">Airway</span>
+                </div>
 
-        <div className="flightInfo">
-          <div className="flightSelectionStatus">
-  <input type="radio" id="flightSelection" name="progress" />
-  <label htmlFor="flightSelection">Flight Selection</label>
+                <div className="flightInfo-ad">
+                    <img src= {ProgressBarAdult} alt="progress-bar-adult" />
+                </div>
+                <div className="homeAboutSign-ad">
+                    <div className="homeAbout-ad">
+                        <a href="#home" className="homeHeader-ad">Home</a>
+                        <div className="aboutAir-ad">
+                            <a href="#about" className="aboutUsheader-ad">About us</a>
+                        </div>
+                    </div>
+                    <button className="signUp-ad">Sign Up</button>
+                </div>
 
-  <input type="radio" id="passengerInfo" name="progress" />
-  <label htmlFor="passengerInfo">Passenger Info</label>
-
-  <input type="radio" id="payment" name="progress" />
-  <label htmlFor="payment">Payment</label>
-
-  <input type="radio" id="confirmation" name="progress" />
-  <label htmlFor="confirmation">Confirmation</label>
-</div>
-
-        </div>
-
-        <div className="homeAboutSign">
-          <div className="homeAbout">
-            <a href="#home" className="homeHeader">Home</a>
-            <div className="aboutAir">
-              <a href="#about" className="aboutUsheader">About us</a>
             </div>
-          </div>
-          <button className="signUp">Sign Up</button>
+            <div className="flightSelectionStatus-ad">
+                <h6>Flight Selection</h6>
+                <h6>Passenger Info</h6>
+                <h6>Payment</h6>
+                <h6>Confirmation</h6>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default PassengersInfoHeader;

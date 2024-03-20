@@ -3,7 +3,17 @@ import './PassengersInfoMiddleTab.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const PassengersInfoMiddleTab = () => {
+const PassengersInfoMiddleTab = ({
+  departurePort,
+  arrivalPort,
+  departureDate,
+  returnDate,
+  noOfAdult,
+  noOfChildren,
+  noOfInfant,
+  tripType
+}) => {
+
   return (
     <div>
       <div className="middletab-adult">
@@ -12,8 +22,8 @@ const PassengersInfoMiddleTab = () => {
           <FontAwesomeIcon icon={faSearch} />
         </button>
         <div className="flightdetails-adult">
-          <h3>Lagos(LOS)-Abuja(ABJ)</h3>
-          <h4>Fri, 29 Dec-Sat, 06 Jan | 1 Adult, null child, 1 Infant | Round Trip</h4>
+          <h3>{departurePort} - {arrivalPort}</h3>
+          <h4>{departureDate} - {returnDate} | {noOfAdult} Adult, {noOfChildren} Child, {noOfInfant} Infant | {tripType}</h4>
         </div>
         <div className="total-price-container-adult">
           <h1>Total Price</h1>
@@ -23,5 +33,4 @@ const PassengersInfoMiddleTab = () => {
     </div>
   );
 };
-
 export default PassengersInfoMiddleTab; 

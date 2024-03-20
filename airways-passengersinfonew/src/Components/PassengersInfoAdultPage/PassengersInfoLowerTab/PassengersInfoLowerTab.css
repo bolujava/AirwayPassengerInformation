@@ -17,6 +17,7 @@ margin:30px;
   margin: 20px;
   display:flex;
   justify-content: center;
+  font-family: "Lato", sans-serif;
 }
 .grid-container-adult {
   display: grid;
@@ -70,11 +71,13 @@ label {
 margin:30px;
 padding: auto;
 justify-content: left;
+font-family: "Lato", sans-serif;
 }
 .contact-info-form-adult {
   margin: 30px;
   display:flex;
   justify-content: center;
+  font-family: "Lato", sans-serif;
 }
 
 .primary-contact-checkbox {
@@ -83,12 +86,12 @@ justify-content: left;
   padding: 30px;
 }
 .primary-contact-checkbox h4 {
-color: blue;
+color: #2D9CDB;
 }
 
 .primary-contact-checkbox input[type="checkbox"] {
   margin-right: 10px;
-  border: 2px solid blue;
+  border: 2px solid #2D9CDB;
 
 }
 .progress-button-container-adult {
@@ -115,6 +118,6 @@ color: blue;
 
 .back-button-adult:hover,
 .continue-button-adult:hover {
-  background-color: skyblue;
+  background-color: #2D9CDB;
   color:white;
 }

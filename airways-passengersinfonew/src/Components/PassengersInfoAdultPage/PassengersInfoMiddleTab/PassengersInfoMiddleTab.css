@@ -28,7 +28,7 @@
   }
   
   .search-button {
-    background-color: blue;
+    background-color: #2D9CDB;
     color: #fff;
     border: none;
     padding: 10px;
@@ -45,14 +45,17 @@
   .flightdetails-adult {
     margin-right: 20px; 
     color: white;
+    font-family: "Lato", sans-serif;
   }
   
   .total-price-container-adult {
     margin-left: auto; 
     color: white;
+    font-family: "Lato", sans-serif;
   }
   
   .total-price-container h1 {
     margin-bottom: 5px; 
+    font-family: "Lato", sans-serif;
   }
   

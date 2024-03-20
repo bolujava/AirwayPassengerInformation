@@ -5,6 +5,8 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 import { Link } from 'react-router-dom';
+import ModalPageTrip from '../../ModalPage/ModalPageTrip';
+
 
 const nationalities = [
 "Afghan",
@@ -241,24 +243,6 @@ const genders= [
 'Female'
 ];
 
-const titles= [
-'Mr',
-'Mrs',
-'Miss',
-'Prof',
-'Dr',
-'King',
-'Prince',
-'Princess',
-'Arch Bishop',
-'Hajji',
-'Emperor',
-'Barrister',
-'Vatican',
-'Pope',
-'Sheikh',
-'Engr'
-];
 
 const PassengersInfoInfantLowerTab = () => {
 const [dob, setDob] = useState('');
@@ -271,12 +255,18 @@ setIsValid(regex.test(value));
 const handleDateChange = (date) => {
 setDob(date);
 };
+const [showModal, setShowModal] = useState(false); 
+
+  const handleContinueClick = () => {
+    setShowModal(true); 
+  };
+
 
   return (
     <div>
     <div className= "infoLowerInfant">
     <div className="blueTabInfant">
-    <p>Passenger Information - Passenger 1(Adult)</p>
+    <p>Passenger Information - Passenger 1(Infant)</p>
     </div>
     </div>
     <div className="passenger-form-infant">
@@ -316,15 +306,6 @@ setDob(date);
                         </div>
             </div>
             <div className="grid-item-infant">
-              <label htmlFor="title">Title</label>
-              <select id="title" name="title" className="input-field">
-                                          <option value="">Select Your Title</option>
-                                          {titles.map((title, index) => (
-                                          <option key={index} value={title}>{title}</option>
-                                          ))}
-                                          </select>
-            </div>
-            <div className="grid-item-infant">
               <label htmlFor="nationality">Nationality</label>
               <select id="nationality" name="nationality" className="input-field">
               <option value="">Select nationality</option>
@@ -340,10 +321,10 @@ setDob(date);
                                           <Link to="/adult-info-page">
                                           <button className="back-button-infant">Back</button>
                                           </Link>
-                                          <Link to="/modal-info-page">
-                                          <button className="continue-button-infant" >Continue</button>
-                                          </Link>
+                                          
+                                          <button className="continue-button-infant" onClick={handleContinueClick}>Continue</button>                       
     </div>
+    {showModal && <ModalPageTrip isOpen={showModal} onClose={() => setShowModal(false)} />}
     </div>
   )
 }

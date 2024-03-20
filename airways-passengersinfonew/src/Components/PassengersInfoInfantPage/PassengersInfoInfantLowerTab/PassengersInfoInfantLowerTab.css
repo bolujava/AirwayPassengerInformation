@@ -5,18 +5,21 @@
     
     .blueTabInfant{
     background-color:#001F3F;
+    
     }
     
     p{
     color: white;
     padding: 20px;
     margin:30px;
+    font-family: "Lato", sans-serif;
     }
     
     .passenger-form-infant {
       margin: 20px;
       display:flex;
       justify-content: center;
+      font-family: "Lato", sans-serif;
     }
     .grid-container-infant {
       display: grid;
@@ -88,7 +91,7 @@
     
     .primary-contact-checkbox input[type="checkbox"] {
       margin-right: 10px;
-      border: 2px solid blue;
+      border: 2px solid#2D9CDB;
     
     }
     .progress-button-container-infant {
@@ -117,5 +120,7 @@
     .continue-button-infant:hover {
       background-color: skyblue;
       color:white;
+      
+      
     }
     
